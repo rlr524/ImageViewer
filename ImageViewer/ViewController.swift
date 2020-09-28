@@ -33,5 +33,21 @@ class ViewController: UITableViewController {
         cell.textLabel?.text = images[indexPath.row]
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 1. Try loading the "Detail" view controller and typecasting it to be DetailViewController.
+        // We use if let: if the optional storyboard (could be nil) fails, or the instantiateViewController fails (could have passed in an invalid Storyboard ID, or the optional "as" fails (could have received back a view controller of a type other than DetailViewController)...if any of these things fail, the code inside the if let block won't execute
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            // 2. Success! Set its selectedImage property. We have access to
+            // the selectedImage property that we defined in DetailViewController
+            // because we are accessing DetailViewController with the
+            // instantiateViewController method above, passing in the "Detail"
+            // identifier we assigned as the "Storyboard ID" in the inspector
+            vc.selectedImage = images[indexPath.row]
+            // 3. Now push it onto the navigation controller
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 

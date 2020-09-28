@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="crr-X9-KjO">
             <objects>
-                <tableViewController id="hlj-QS-667" customClass="ViewController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Table" id="hlj-QS-667" customClass="ViewController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XDM-zq-8Qa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +45,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rx-xL-Dsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="986.95652173913049" y="26.785714285714285"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Ma9-xX-f57">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="33X-NS-4xj" customClass="DetailViewController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e56-Of-Xb9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kff-Am-IGZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Krp-XG-Hcj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kff-Am-IGZ" firstAttribute="leading" secondItem="Krp-XG-Hcj" secondAttribute="leading" id="HP7-14-Kt2"/>
+                            <constraint firstItem="Kff-Am-IGZ" firstAttribute="centerY" secondItem="e56-Of-Xb9" secondAttribute="centerY" id="SRf-vH-DgX"/>
+                            <constraint firstItem="Kff-Am-IGZ" firstAttribute="top" secondItem="e56-Of-Xb9" secondAttribute="topMargin" constant="-44" id="pEQ-Gb-WQV"/>
+                            <constraint firstItem="Kff-Am-IGZ" firstAttribute="centerX" secondItem="e56-Of-Xb9" secondAttribute="centerX" id="zDq-nb-Ncz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Kff-Am-IGZ" id="Ggu-sc-JBV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMG-N8-NAy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="26.785714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7PT-HX-mrS">
