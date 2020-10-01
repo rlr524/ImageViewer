@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41BFB7A25268DD700DFB5F1 /* nssl0049.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D41BFB7925268DD700DFB5F1 /* nssl0049.jpg */; };
 		D43CB519251E9AB0001B5A4D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CB518251E9AB0001B5A4D /* DetailViewController.swift */; };
 		D4B896B6251566A400F3E712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B896B5251566A400F3E712 /* AppDelegate.swift */; };
 		D4B896B8251566A400F3E712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B896B7251566A400F3E712 /* SceneDelegate.swift */; };
@@ -14,7 +15,6 @@
 		D4B896BD251566A400F3E712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B896BB251566A400F3E712 /* Main.storyboard */; };
 		D4B896BF251566A500F3E712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B896BE251566A500F3E712 /* Assets.xcassets */; };
 		D4B896C2251566A500F3E712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B896C0251566A500F3E712 /* LaunchScreen.storyboard */; };
-		D4B896D925156E7300F3E712 /* nssl0049.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B896CF25156E7300F3E712 /* nssl0049.jpg */; };
 		D4B896DA25156E7300F3E712 /* nssl0046.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B896D025156E7300F3E712 /* nssl0046.jpg */; };
 		D4B896DB25156E7300F3E712 /* nssl0091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B896D125156E7300F3E712 /* nssl0091.jpg */; };
 		D4B896DC25156E7300F3E712 /* nssl0045.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B896D225156E7300F3E712 /* nssl0045.jpg */; };
@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D41BFB7925268DD700DFB5F1 /* nssl0049.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0049.jpg; sourceTree = "<group>"; };
 		D43CB518251E9AB0001B5A4D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D4B896B2251566A400F3E712 /* ImageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B896B5251566A400F3E712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		D4B896BE251566A500F3E712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4B896C1251566A500F3E712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4B896C3251566A500F3E712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4B896CF25156E7300F3E712 /* nssl0049.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0049.jpg; sourceTree = "<group>"; };
 		D4B896D025156E7300F3E712 /* nssl0046.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0046.jpg; sourceTree = "<group>"; };
 		D4B896D125156E7300F3E712 /* nssl0091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0091.jpg; sourceTree = "<group>"; };
 		D4B896D225156E7300F3E712 /* nssl0045.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0045.jpg; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		D4B896CE25156E7300F3E712 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				D4B896CF25156E7300F3E712 /* nssl0049.jpg */,
+				D41BFB7925268DD700DFB5F1 /* nssl0049.jpg */,
 				D4B896D025156E7300F3E712 /* nssl0046.jpg */,
 				D4B896D125156E7300F3E712 /* nssl0091.jpg */,
 				D4B896D225156E7300F3E712 /* nssl0045.jpg */,
@@ -134,6 +134,9 @@
 		D4B896AA251566A400F3E712 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					"Ocean Storm",
+				);
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
@@ -171,10 +174,10 @@
 				D4B896DB25156E7300F3E712 /* nssl0091.jpg in Resources */,
 				D4B896E025156E7300F3E712 /* nssl0043.jpg in Resources */,
 				D4B896E225156E7300F3E712 /* nssl0034.jpg in Resources */,
-				D4B896D925156E7300F3E712 /* nssl0049.jpg in Resources */,
 				D4B896DE25156E7300F3E712 /* nssl0041.jpg in Resources */,
 				D4B896DF25156E7300F3E712 /* nssl0042.jpg in Resources */,
 				D4B896C2251566A500F3E712 /* LaunchScreen.storyboard in Resources */,
+				D41BFB7A25268DD700DFB5F1 /* nssl0049.jpg in Resources */,
 				D4B896BF251566A500F3E712 /* Assets.xcassets in Resources */,
 				D4B896DC25156E7300F3E712 /* nssl0045.jpg in Resources */,
 				D4B896BD251566A400F3E712 /* Main.storyboard in Resources */,

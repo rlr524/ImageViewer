@@ -11,10 +11,12 @@ class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     
     var selectedImage: String?
+    var imageCount: Int = 0
+    var selectedImageIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = selectedImage
+        title = "Picture \(selectedImageIndex) of \(imageCount)"
         navigationItem.largeTitleDisplayMode = .never
 
         // Do any additional setup after loading the view.
@@ -45,5 +47,4 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

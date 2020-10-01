@@ -23,7 +23,7 @@ class ViewController: UITableViewController {
                 images.append(item)
             }
         }
-        print(images)
+        images.sort(by: <)
     }
     // Remember, _ is the external name of the first param, tableView is the internal name, and UITableView is the type; same for the second param: numberOfRowsInSection is external, section is internal, and Int is type
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,6 +47,12 @@ class ViewController: UITableViewController {
             // instantiateViewController method above, passing in the "Detail"
             // identifier we assigned as the "Storyboard ID" in the inspector
             vc.selectedImage = images[indexPath.row]
+            vc.imageCount = images.count
+            // The indexpath.row is a string identifying the title in the index
+            // position of the row we choose. We convert it to an int and
+            // add one to it to identify an image number, e.g. 1 - 10, instead of
+            // an index location in the array of images
+            vc.selectedImageIndex = Int((indexPath.row) + 1)
             // 3. Now push it onto the navigation controller
             navigationController?.pushViewController(vc, animated: true)
         }
