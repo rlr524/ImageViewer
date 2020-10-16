@@ -7,7 +7,28 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, UIActivityItemSource {
+    // This is a placeholder that tells UIKit what type of data we want to share
+    // on our recommend button on the main VC. We're telling it we want to share
+    // a string. The return value is unimportant, as long as it's a string. In this
+    // case we're just using the same value as what we actually pass for the
+    // message subject line.
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return "Hello, Madison"
+    }
+    
+    // This is the function that actually prefills our message text when
+    // we recommend the app.
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        return "Hello, Madison!"
+    }
+    
+    // This function prefills our message subject line when we recomment the app. This appears
+    // to only work with the Apple mail app, not 3P mail apps like Gmail or Outlook.
+    func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivity.ActivityType?) -> String {
+        return "Secret message!"
+    }
+    
     var images = [String]()
 
     override func viewDidLoad() {
@@ -59,11 +80,12 @@ class ViewController: UITableViewController {
         }
     }
     
+    // This function allows us to share the app itself via message, mail, etc.
     @objc func recommendApp() {
-        let item: [Any] = ["This app is my favorite", URL(string: "https://www.emiyaconsulting.com")!]
-        let vc = UIActivityViewController(activityItems: item, applicationActivities: [])
-        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        present(vc, animated: true)
+        let item = [self]
+        let ac = UIActivityViewController(activityItems: item, applicationActivities: [])
+        ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(ac, animated: true)
     }
 }
 
